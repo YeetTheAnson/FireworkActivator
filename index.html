@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firework Activator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="controls-container">
+        <div class="control-group">
+            <span class="control-label">Voltage</span>
+            <div class ="slider-container">
+                <input type="range" id="voltageSlider" min="0.5" max="5.0" step="0.1" value="5.0">
+                <input type="number" id="VoltageInput" value="5.0">
+                <span class="unit">V</span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Real-time Current</span>
+            <div class="slider-container">
+                <span id="currentValue">0</span>
+                <span class="unit">mA</span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Ignition Duration</span>
+            <div class="slider-container">
+                <input type="range" id="durationSlider" min="0.5" max="10" step="0.1" value="3.0">
+                <input type="number" id="durationInput" value="3.0">
+                <span class="unit">s</span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Status</span>
+            <div class="status-indicator">
+                <div id="statusCircle" class="status-circle"></div>
+                <span id="statusText" class="status-text">Armed</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <button id="activateButton">Activate</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
